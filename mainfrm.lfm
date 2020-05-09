@@ -1,8 +1,164 @@
 object frmMain: TfrmMain
-  Left = 342
-  Height = 240
-  Top = 250
-  Width = 320
+  Left = 394
+  Height = 544
+  Top = 235
+  Width = 903
   Caption = 'mikSQL'
+  ClientHeight = 517
+  ClientWidth = 903
+  Menu = menuMain
   LCLVersion = '2.0.2.0'
+  object grpbxCon: TGroupBox
+    Left = 0
+    Height = 397
+    Top = 0
+    Width = 217
+    Align = alLeft
+    Caption = 'Подключения'
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ClientHeight = 377
+    ClientWidth = 215
+    TabOrder = 0
+    object vstConnections: TVirtualStringTree
+      Left = 0
+      Height = 377
+      Top = 0
+      Width = 215
+      Align = alClient
+      DefaultNodeHeight = 19
+      DefaultText = 'Node'
+      Header.AutoSizeIndex = 0
+      Header.Columns = <>
+      Header.MainColumn = -1
+      TabOrder = 0
+    end
+  end
+  object pCtrlQuery: TPageControl
+    Left = 218
+    Height = 397
+    Top = 0
+    Width = 685
+    ActivePage = tsQuery
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 1
+    object tsQuery: TTabSheet
+      Caption = 'tsQuery'
+      ClientHeight = 364
+      ClientWidth = 675
+      object splQuery: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 6
+        Top = 114
+        Width = 675
+        Align = alTop
+        ResizeAnchor = akTop
+      end
+      object vstQResults: TVirtualStringTree
+        Left = 0
+        Height = 244
+        Top = 120
+        Width = 675
+        Align = alClient
+        DefaultNodeHeight = 19
+        DefaultText = 'Node'
+        Header.AutoSizeIndex = 0
+        Header.Columns = <>
+        Header.MainColumn = -1
+        TabOrder = 1
+      end
+      object pnlQueryCtrl: TPanel
+        Left = 0
+        Height = 114
+        Top = 0
+        Width = 675
+        Align = alTop
+        Caption = 'pnlQueryCtrl'
+        ClientHeight = 114
+        ClientWidth = 675
+        TabOrder = 2
+        object mQueryStr: TMemo
+          Left = 1
+          Height = 71
+          Top = 1
+          Width = 673
+          Align = alClient
+          TabOrder = 0
+        end
+        object pnlQueruCtrls: TPanel
+          Left = 1
+          Height = 41
+          Top = 72
+          Width = 673
+          Align = alBottom
+          ClientHeight = 41
+          ClientWidth = 673
+          TabOrder = 1
+          object btnStartQuery: TButton
+            Left = 568
+            Height = 39
+            Top = 1
+            Width = 104
+            Align = alRight
+            Caption = 'Выполнить'
+            OnClick = btnStartQueryClick
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object splCons: TSplitter
+    Left = 217
+    Height = 397
+    Top = 0
+    Width = 1
+  end
+  object stBrInfo: TStatusBar
+    Left = 0
+    Height = 20
+    Top = 497
+    Width = 903
+    Panels = <>
+  end
+  object vstLog: TVirtualStringTree
+    Left = 0
+    Height = 100
+    Top = 397
+    Width = 903
+    Align = alBottom
+    DefaultNodeHeight = 19
+    DefaultText = 'Node'
+    Header.AutoSizeIndex = 0
+    Header.Columns = <>
+    Header.MainColumn = -1
+    TabOrder = 4
+  end
+  object menuMain: TMainMenu
+    left = 856
+    top = 472
+    object mItmCon: TMenuItem
+      Caption = 'Подключение'
+      object mItmConAdd: TMenuItem
+        Caption = 'Добавить'
+        OnClick = mItmConAddClick
+      end
+      object mItmConSave: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = mItmConSaveClick
+      end
+      object mItmConExit: TMenuItem
+        Caption = 'Выход'
+        OnClick = mItmConExitClick
+      end
+    end
+    object mItmHelp: TMenuItem
+      Caption = 'Справка'
+      object mItmAbout: TMenuItem
+        Caption = 'О программе'
+        OnClick = mItmAboutClick
+      end
+    end
+  end
 end

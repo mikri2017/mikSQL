@@ -1,0 +1,103 @@
+object frmAboutProg: TfrmAboutProg
+  Left = 457
+  Height = 201
+  Top = 227
+  Width = 321
+  ActiveControl = ButtonPanel1.OKButton
+  BorderStyle = bsSingle
+  Caption = 'О программе'
+  ClientHeight = 201
+  ClientWidth = 321
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.2.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 44
+    Top = 151
+    Width = 309
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    HelpButton.Enabled = False
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CloseButton.Enabled = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    CancelButton.Enabled = False
+    TabOrder = 0
+    ShowButtons = [pbOK]
+  end
+  object lblIconsPartner: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 5
+    Height = 1
+    Top = 166
+    Width = 311
+    Align = alCustom
+    Alignment = taRightJustify
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 5
+    ParentBidiMode = False
+    ParentColor = False
+  end
+  object lblVersionValue: TLabel
+    Left = 128
+    Height = 1
+    Top = 40
+    Width = 1
+    ParentColor = False
+  end
+  object lblProgName: TLabel
+    Left = 104
+    Height = 17
+    Top = 8
+    Width = 9
+    Caption = '   '
+    ParentColor = False
+  end
+  object lblCapVersion: TLabel
+    Left = 8
+    Height = 17
+    Top = 40
+    Width = 132
+    Caption = 'Версия программы:'
+    ParentColor = False
+  end
+  object lblCapDevName: TLabel
+    Left = 8
+    Height = 17
+    Top = 72
+    Width = 90
+    Caption = 'Разработчик:'
+    ParentColor = False
+  end
+  object lblVersion: TLabel
+    Left = 160
+    Height = 17
+    Top = 40
+    Width = 20
+    Caption = '0.1'
+    ParentColor = False
+  end
+  object lblDevName: TLabel
+    Left = 160
+    Height = 17
+    Top = 72
+    Width = 18
+    Caption = '      '
+    ParentColor = False
+  end
+  object lblDevEmail: TLabel
+    Left = 88
+    Height = 17
+    Top = 104
+    Width = 15
+    Caption = '     '
+    ParentColor = False
+  end
+end
